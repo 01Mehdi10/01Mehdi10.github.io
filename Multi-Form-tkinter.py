@@ -106,3 +106,4 @@ sqr(s,d,ds5)
 bill.color("blue")
 bill.goto(0,-200)
 #bill.write("C'est réussi :-)", None, None, "16pt bold")
+a = input()	   # attendre
