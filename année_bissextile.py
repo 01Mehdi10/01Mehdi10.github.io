@@ -1,14 +1,16 @@
-# script pour determiner si une année est bissextile
-print ("Entre une année")
-y = int(input ())
-if y % 4 == 0:
-  if y % 100 == 0:
-    if y % 400 == 0:
-      print (y, "est une année bissextile")
+# Année bissextile
+print("Entre une année, format à 4 chiffres. 'Exemple = 2008' :", end = " ")
+a = eval(input())
+if a % 4 != 0: # non bissextile
+    b = 0
+else:
+    if a % 100 == 0:  # non bissextile
+        b = 0
+    elif a % 400 == 0: # bissextile
+        b = 1
     else:
-      print (y, "n'est pas une année bissextile")
-  else:
-    print (y, "est une année bissextile")
-else: 
-  (y, "n'est pas une année bissextile")
-  
+        b = 1
+if b == 0:
+    print(a, "n'est pas une année bissextile.")
+else:
+    print(a, "est une année bissextile.")
